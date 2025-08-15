@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from datetime import datetime
 import re
-
+port = int(os.environ.get("PORT", 8501))
 
 # ------------------------------
 # Config / Load key
