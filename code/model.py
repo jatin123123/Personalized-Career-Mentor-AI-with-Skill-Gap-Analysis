@@ -237,10 +237,10 @@ with st.sidebar:
     
     # Model selection
     model_options = [
-        "llama3-8b-8192",
-        "llama3-70b-8192",
-        "mixtral-8x7b-32768",
-        "gemma-7b-it"
+        "openai/gpt-oss-120b",
+        "gemma2-9b-it",
+        "llama-3.3-70b-versatile",
+        "deepseek-r1-distill-llama-70b"
     ]
     selected_model = st.selectbox("🤖 AI Model", model_options, index=0)
     
