@@ -29,7 +29,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Upload artifact for deployment jobs
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: python-app
@@ -50,15 +50,9 @@ jobs:
         with:
           name: python-app
 
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_597E33A0CCEE4AA4BD1111B45BE40789 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5AF910F4C4744F5992870944891AA4B4 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_81B36524E0F641D6BE49BE242629C8F4 }}
-
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: "skillgapfinder"
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
