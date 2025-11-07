@@ -29,7 +29,7 @@ st.set_page_config(
 )
 
 # ------------------------------
-# Advanced Modern CSS (same as before)
+# Advanced Modern CSS 
 # ------------------------------
 st.markdown(
     """
@@ -237,10 +237,10 @@ with st.sidebar:
     
     # Model selection
     model_options = [
-        "openai/gpt-oss-120b",
-        "gemma2-9b-it",
+        "llama-3.1-8b-instant",
+        "qwen/qwen3-32b",
         "llama-3.3-70b-versatile",
-        "deepseek-r1-distill-llama-70b"
+        "openai/gpt-oss-120b"
     ]
     selected_model = st.selectbox("🤖 AI Model", model_options, index=0)
     
