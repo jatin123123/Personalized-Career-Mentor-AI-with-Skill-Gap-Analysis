@@ -5,10 +5,13 @@ import json
 import streamlit as st
 from dotenv import load_dotenv
 from pypdf import PdfReader
-from langchain.prompts import PromptTemplate
-from langchain.output_parsers import StructuredOutputParser, ResponseSchema
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import JsonOutputParser
+from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_groq import ChatGroq
-from langchain.schema import HumanMessage, SystemMessage
+from pydantic import BaseModel, Field
+from typing import List, Optional
+
 import plotly.graph_objects as go
 import plotly.express as px
 from datetime import datetime
@@ -19,7 +22,7 @@ port = int(os.environ.get("PORT", 8501))
 # Config / Load key
 # ------------------------------
 load_dotenv()
-GROQ_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
 st.set_page_config(
     page_title="AI Resume Matcher Pro", 
@@ -269,35 +272,34 @@ with st.sidebar:
 # ------------------------------
 # API Key Validation
 # ------------------------------
-if not GROQ_KEY:
+if not GROQ_API_KEY:
     st.error("🔑 GROQ_API_KEY not found. Please set it in your `.env` file.", icon="⚠️")
     st.stop()
 
 # ------------------------------
 # LLM Setup
 # ------------------------------
-llm = ChatGroq(api_key=GROQ_KEY, model=selected_model, temperature=temperature)
+llm = ChatGroq(api_key=GROQ_API_KEY, model=selected_model, temperature=temperature)
 
 # ------------------------------
 # Enhanced Prompts with Better Structure
 # ------------------------------
-# Enhanced comparison prompt with structured output
-response_schemas = [
-    ResponseSchema(name="skills_matched", description="Array of skills present in both JD and resume - return as comma-separated string"),
-    ResponseSchema(name="skills_missing", description="Array of critical skills missing from resume - return as comma-separated string"),
-    ResponseSchema(name="skills_extra", description="Array of additional skills in resume not required by JD - return as comma-separated string"),
-    ResponseSchema(name="experience_match", description="How well experience aligns with requirements"),
-    ResponseSchema(name="education_match", description="Education alignment assessment"),
-    ResponseSchema(name="overall_match_percentage", description="Overall match percentage (0-100) as integer"),
-    ResponseSchema(name="selection_probability", description="Likelihood of selection (High/Medium/Low)"),
-    ResponseSchema(name="strength_areas", description="Top 3 candidate strengths as comma-separated string"),
-    ResponseSchema(name="improvement_areas", description="Top 3 areas needing improvement as comma-separated string"),
-    ResponseSchema(name="specific_recommendations", description="Actionable improvement steps as comma-separated string"),
-    ResponseSchema(name="interview_preparation", description="Suggested interview focus areas as comma-separated string"),
-    ResponseSchema(name="salary_competitiveness", description="Salary negotiation position assessment")
-]
+# Pydantic model for structured output
+class ResumeAnalysisResult(BaseModel):
+    skills_matched: str = Field(description="Skills present in both JD and resume - comma-separated string")
+    skills_missing: str = Field(description="Critical skills missing from resume - comma-separated string")
+    skills_extra: str = Field(description="Additional skills in resume not required by JD - comma-separated string")
+    experience_match: str = Field(description="How well experience aligns with requirements")
+    education_match: str = Field(description="Education alignment assessment")
+    overall_match_percentage: int = Field(description="Overall match percentage (0-100)")
+    selection_probability: str = Field(description="Likelihood of selection (High/Medium/Low)")
+    strength_areas: str = Field(description="Top 3 candidate strengths - comma-separated string")
+    improvement_areas: str = Field(description="Top 3 areas needing improvement - comma-separated string")
+    specific_recommendations: str = Field(description="Actionable improvement steps - comma-separated string")
+    interview_preparation: str = Field(description="Suggested interview focus areas - comma-separated string")
+    salary_competitiveness: str = Field(description="Salary negotiation position assessment")
 
-output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
+output_parser = JsonOutputParser(pydantic_object=ResumeAnalysisResult)
 format_instructions = output_parser.get_format_instructions()
 
 prompt_compare = PromptTemplate(
