@@ -33,3 +33,9 @@ uploaded_resume.pdf
 node_modules
 ./node_modules
 /node_modules
+
+node_modules/
+.next/
+.env
+.env.local
+*.log
