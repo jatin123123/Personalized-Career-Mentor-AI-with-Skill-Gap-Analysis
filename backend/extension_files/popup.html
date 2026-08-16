@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=400" />
+  <title>Resume Matcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <!-- Floating ambient orbs -->
+    <div class="header-orb orb-1"></div>
+    <div class="header-orb orb-2"></div>
+    <div class="header-orb orb-3"></div>
+
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+          <polyline points="14,2 14,8 20,8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+      </div>
+      <span class="brand-name">Resume Matcher</span>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn-how-to" id="btnHowTo" title="How to use">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Guide
+      </button>
+      <div class="status-pill" id="statusPill">
+        <span class="dot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <!-- Tab bar -->
+    <div class="tabs" id="tabBar">
+      <button class="tab active" data-tab="analyze" id="tabAnalyze">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+        Analyze
+      </button>
+      <button class="tab" data-tab="resume" id="tabResume">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        My Resume
+      </button>
+      <button class="tab" data-tab="settings" id="tabSettings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+        Settings
+      </button>
+      <div class="tab-indicator" id="tabIndicator"></div>
+    </div>
+    <div class="tabs-border"></div>
+
+    <!-- ── ANALYZE TAB ── -->
+    <div class="tab-content active" id="panelAnalyze">
+
+      <!-- Job detect banner -->
+      <div class="job-banner" id="jobBanner">
+        <div class="job-banner-icon">💼</div>
+        <div>
+          <div class="job-banner-title" id="jobTitle">No job detected</div>
+          <div class="job-banner-sub">Navigate to a LinkedIn job page</div>
+        </div>
+      </div>
+
+      <!-- Analyze button -->
+      <button class="btn-primary" id="btnAnalyze" disabled>
+        <span id="btnLabel">Analyze This Job</span>
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <!-- Loading -->
+      <div class="loader" id="loader" hidden>
+        <div class="spinner-wrap">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+        </div>
+        <div class="loader-text">Analysing<span class="dots"></span></div>
+      </div>
+
+      <!-- Results -->
+      <div id="results" hidden>
+        <!-- Score card with SVG ring -->
+        <div class="score-card" id="scoreCard">
+          <div class="score-ring-wrap">
+            <svg class="score-ring-svg" viewBox="0 0 110 110">
+              <defs>
+                <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#7c3aed"/>
+                  <stop offset="50%" stop-color="#06b6d4"/>
+                  <stop offset="100%" stop-color="#ec4899"/>
+                </linearGradient>
+                <linearGradient id="scoreGradGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#34d399"/>
+                  <stop offset="100%" stop-color="#059669"/>
+                </linearGradient>
+                <linearGradient id="scoreGradAmber" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fbbf24"/>
+                  <stop offset="100%" stop-color="#d97706"/>
+                </linearGradient>
+                <linearGradient id="scoreGradRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f87171"/>
+                  <stop offset="100%" stop-color="#dc2626"/>
+                </linearGradient>
+              </defs>
+              <circle class="score-ring-bg" cx="55" cy="55" r="50"/>
+              <circle class="score-ring-fill" id="scoreRingFill" cx="55" cy="55" r="50"/>
+            </svg>
+            <div class="score-num" id="scoreNum">0%</div>
+          </div>
+          <div class="score-label" id="scoreLabel">Match Score</div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat" id="statMatched">
+            <div class="stat-val green">–</div>
+            <div class="stat-key">Matched</div>
+          </div>
+          <div class="stat" id="statMissing">
+            <div class="stat-val red">–</div>
+            <div class="stat-key">Missing</div>
+          </div>
+          <div class="stat" id="statExtra">
+            <div class="stat-val amber">–</div>
+            <div class="stat-key">Extra</div>
+          </div>
+        </div>
+
+        <!-- Skill sections -->
+        <div class="section" id="sectionMissing">
+          <div class="section-head">
+            <span class="dot-red">●</span> Skills to Learn
+          </div>
+          <div class="chips" id="chipsMissing"></div>
+        </div>
+
+        <div class="section" id="sectionMatched">
+          <div class="section-head">
+            <span class="dot-green">●</span> Skills You Have
+          </div>
+          <div class="chips" id="chipsMatched"></div>
+        </div>
+
+        <!-- Top recommendation -->
+        <div class="section" id="sectionRec">
+          <div class="section-head">💡 Top Recommendations</div>
+          <div id="recList" class="rec-list"></div>
+        </div>
+
+        <!-- Re-analyze button -->
+        <button class="btn-secondary" id="btnReanalyze">↻ Re-analyze</button>
+      </div>
+
+      <!-- Error -->
+      <div class="error-box" id="errorBox" hidden></div>
+    </div>
+
+    <!-- ── RESUME TAB ── -->
+    <div class="tab-content" id="panelResume">
+      <div class="resume-status" id="resumeStatus">
+        <div class="resume-icon">📄</div>
+        <div id="resumeStatusText">No resume saved</div>
+      </div>
+
+      <!-- Upload area -->
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-icon">⬆</div>
+        <div class="drop-title">Upload PDF Resume</div>
+        <div class="drop-hint">Click or drag &amp; drop · PDF only</div>
+        <input type="file" id="fileInput" accept=".pdf" hidden />
+      </div>
+
+      <div class="upload-progress" id="uploadProgress" hidden>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-text" id="progressText">Uploading…</div>
+      </div>
+
+      <div class="alert-success" id="uploadSuccess" hidden></div>
+      <div class="error-box" id="uploadError" hidden></div>
+
+      <button class="btn-danger" id="btnClearResume" hidden>✕ Remove Resume</button>
+    </div>
+
+    <!-- ── SETTINGS TAB ── -->
+    <div class="tab-content" id="panelSettings">
+      <div class="setting-group">
+        <label>Backend URL</label>
+        <input type="url" id="inputApiUrl" placeholder="http://localhost:8001" />
+        <div class="setting-hint">Point to your running backend server</div>
+      </div>
+      <div class="setting-group">
+        <label>AI Model</label>
+        <select id="inputModel">
+          <option value="llama-3.1-8b-instant">Llama 3.1 8B (Fast)</option>
+          <option value="llama-3.3-70b-versatile" selected>Llama 3.3 70B (Best)</option>
+          <option value="qwen/qwen3-32b">Qwen 3 32B</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>Analysis Depth</label>
+        <select id="inputDepth">
+          <option value="Quick">Quick</option>
+          <option value="Standard" selected>Standard</option>
+          <option value="Deep">Deep</option>
+          <option value="Comprehensive">Comprehensive</option>
+        </select>
+      </div>
+      <button class="btn-primary" id="btnSaveSettings">Save Settings</button>
+      <div class="alert-success" id="settingsSaved" hidden>✓ Settings saved!</div>
+    </div>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ONBOARDING OVERLAY
+       ══════════════════════════════════════════════════════════ -->
+  <div class="onboarding-overlay" id="onboardingOverlay" hidden>
+    <div class="onboarding-card" id="onboardingCard">
+      <button class="ob-close" id="obClose">✕</button>
+      <div class="ob-icon" id="obIcon">📄</div>
+      <div class="ob-step-label" id="obStepLabel">Step 1 of 4</div>
+      <div class="ob-title" id="obTitle">Upload Your Resume</div>
+      <div class="ob-desc" id="obDesc">Go to the "My Resume" tab and upload your PDF. Your resume is stored locally and never leaves your machine.</div>
+      <div class="ob-dots" id="obDots">
+        <div class="ob-dot active"></div>
+        <div class="ob-dot"></div>
+        <div class="ob-dot"></div>
+        <div class="ob-dot"></div>
+      </div>
+      <div class="ob-actions">
+        <button class="ob-btn ob-btn-skip" id="obSkip">Skip</button>
+        <button class="ob-btn ob-btn-next" id="obNext">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

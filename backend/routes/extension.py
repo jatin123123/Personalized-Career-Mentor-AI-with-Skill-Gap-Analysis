@@ -7,7 +7,10 @@ from fastapi.responses import StreamingResponse
 
 router = APIRouter()
 
-EXTENSION_DIR = Path(__file__).resolve().parents[2] / "extension"
+# Check bundled location first (for cloud deployment), then fallback to workspace root
+_bundled_dir = Path(__file__).resolve().parent.parent / "extension_files"
+_parent_dir = Path(__file__).resolve().parents[2] / "extension"
+EXTENSION_DIR = _bundled_dir if _bundled_dir.exists() else _parent_dir
 
 # Files to exclude from the ZIP
 EXCLUDE = {".git", "__pycache__", ".DS_Store", "Thumbs.db", "README.txt"}
