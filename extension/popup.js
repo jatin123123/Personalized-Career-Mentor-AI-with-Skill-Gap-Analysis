@@ -1,4 +1,4 @@
-const API_DEFAULT = 'http://localhost:8001';
+const API_DEFAULT = 'https://career-mentor-backend.azurewebsites.net';
 
 // ── Helpers ────────────────────────────────────────────────────
 const $ = (id) => document.getElementById(id);
@@ -248,7 +248,7 @@ async function handleFile(file) {
     }
   } catch (err) {
     clearInterval(timer);
-    showError('uploadError', 'Upload failed. Ensure backend server is running on port 8001.');
+    showError('uploadError', 'Upload failed. Could not reach the backend server. Please try again.');
     $('uploadProgress').hidden = true;
   }
 }
@@ -436,7 +436,7 @@ async function runAnalysis() {
   } catch (err) {
     $('loader').hidden = true;
     $('btnAnalyze').disabled = false;
-    showError('errorBox', 'Cannot reach backend server. Check that port 8001 is running.');
+    showError('errorBox', 'Cannot reach backend server. Please try again in a moment.');
     setStatus('Offline', false);
   }
 }

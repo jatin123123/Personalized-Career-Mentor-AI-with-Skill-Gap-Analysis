@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Resume Matcher — LinkedIn Analyzer",
-  "version": "1.0.0",
-  "description": "Auto-analyze LinkedIn jobs against your saved resume. Get instant skill-gap insights.",
+  "version": "1.1.0",
+  "description": "Auto-analyze LinkedIn jobs against your saved resume. Get instant skill-gap insights powered by Groq AI.",
   "permissions": [
     "storage",
     "activeTab",
@@ -11,7 +11,7 @@
   ],
   "host_permissions": [
     "https://www.linkedin.com/*",
-    "http://localhost:8001/*"
+    "https://career-mentor-backend.azurewebsites.net/*"
   ],
   "action": {
     "default_popup": "popup.html",

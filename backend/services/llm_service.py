@@ -1,20 +1,28 @@
 import os
 import json
 from pathlib import Path
-from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_groq import ChatGroq
 from models.schemas import AnalysisResult
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-load_dotenv(BASE_DIR / ".env")
-load_dotenv(BASE_DIR / "backend" / ".env", override=True)
+# On Azure/cloud, GROQ_API_KEY is set as an App Setting (environment variable).
+# Locally, it's read from backend/.env via python-dotenv (loaded in __init__ or startup).
+# We deliberately do NOT call load_dotenv() here so cloud env vars take precedence cleanly.
+try:
+    from dotenv import load_dotenv
+    # Only load .env files in local development (when not running on Azure)
+    if not os.getenv("WEBSITE_SITE_NAME"):  # WEBSITE_SITE_NAME is always set on Azure App Service
+        _BASE_DIR = Path(__file__).resolve().parents[2]
+        load_dotenv(_BASE_DIR / ".env")
+        load_dotenv(_BASE_DIR / "backend" / ".env", override=True)
+except ImportError:
+    pass
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 if not GROQ_API_KEY:
-    raise RuntimeError("GROQ_API_KEY is not set. Add it to .env or backend/.env")
+    raise RuntimeError("GROQ_API_KEY is not set. Set it as an Azure App Setting or in backend/.env for local dev.")
 
 _parser = JsonOutputParser(pydantic_object=AnalysisResult)
 _format_instructions = _parser.get_format_instructions()
@@ -66,7 +74,7 @@ def run_analysis(job_description: str, resume_text: str, model: str, depth: str,
     ))
 
     response = llm.invoke([SystemMessage(content=_SYSTEM_MSG), human_msg])
-    
+
     try:
         result = _parser.parse(response.content)
     except Exception:

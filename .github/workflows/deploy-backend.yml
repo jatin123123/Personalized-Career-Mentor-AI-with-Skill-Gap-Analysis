@@ -1,0 +1,49 @@
+name: Deploy Backend to Azure App Service
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy-backend.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Zip deployment package
+        run: |
+          cd ..
+          zip -r backend-deploy.zip backend/ \
+            --exclude "backend/__pycache__/*" \
+            --exclude "backend/**/__pycache__/*" \
+            --exclude "backend/.env" \
+            --exclude "backend/*.pyc"
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'career-mentor-backend'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: backend-deploy.zip
+
+      - name: Health check
+        run: |
+          sleep 30
+          curl -f https://career-mentor-backend.azurewebsites.net/ || exit 1

@@ -38,7 +38,7 @@ export default function Home() {
         setView('input');
       }
     } catch {
-      setError('Could not reach backend. Is the FastAPI server running on port 8001?');
+      setError('Could not reach the backend server. Please try again in a moment.');
       setView('input');
     }
   }

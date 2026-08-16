@@ -37,7 +37,7 @@ export default function ExtensionBanner() {
       setDone(true);
       setTimeout(() => setDone(false), 3000);
     } catch {
-      alert('Could not reach backend. Please ensure the backend server is running on port 8001.');
+      alert('Could not reach the backend server. Please try again in a moment.');
     } finally {
       setDownloading(false);
     }
