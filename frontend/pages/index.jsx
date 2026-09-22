@@ -9,8 +9,7 @@ import LoadingView from '../components/LoadingView';
 import ExtensionBanner from '../components/ExtensionBanner';
 import InteractiveBackground from '../components/InteractiveBackground';
 import CursorGlow from '../components/CursorGlow';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+import { API_URL } from '../lib/api';
 
 export default function Home() {
   // 'home' | 'input' | 'loading' | 'results'

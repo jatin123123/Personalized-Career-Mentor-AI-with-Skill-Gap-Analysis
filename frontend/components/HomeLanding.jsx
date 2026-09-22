@@ -16,8 +16,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import TiltCard from './TiltCard';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+import { API_URL } from '../lib/api';
 
 const features = [
   {

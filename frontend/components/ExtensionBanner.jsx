@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Download, Globe, Check, Search, FileText, Zap, Sparkles, ArrowRight } from 'lucide-react';
 import TiltCard from './TiltCard';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+import { API_URL } from '../lib/api';
 
 const STEPS = [
   { label: 'Download extension zip & extract folder' },

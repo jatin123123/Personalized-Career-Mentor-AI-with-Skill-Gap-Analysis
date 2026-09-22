@@ -13,14 +13,14 @@ import {
   Briefcase
 } from 'lucide-react';
 import TiltCard from './TiltCard';
+import { API_URL } from '../lib/api';
 
 const MODELS = [
-  'llama-3.3-70b-versatile',
-  'llama-3.1-8b-instant',
-  'qwen/qwen3-32b',
+  'openai/gpt-oss-120b',
+  'meta-llama/llama-prompt-guard-2-86m',
+  'qwen/qwen3.8-27b',
 ];
 const DEPTHS = ['Quick', 'Standard', 'Deep', 'Comprehensive'];
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
 
 const SAMPLE_PRESETS = [
   {
