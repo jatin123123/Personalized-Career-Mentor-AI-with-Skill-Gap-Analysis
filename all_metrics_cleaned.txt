@@ -1,0 +1,207 @@
+
+
+============================== SLIDE 1 ==============================
+[19,11] | K  | IWET  | Al Fundamentals & Python Programming  | UNIVERSITY  | DELHI-NCR. GHAZIABAD, UP (INDIA)  | Learn  | |  | Build  | |  | Innovate  | Let's Bridge  | the Gap  | (_C& SMARTBRIDGE
+[14,66] (Under Section 3 of the UGC Act, 1956)  | Empowering Minds. Enabling Skills.
+[67,109] u  | w  | MSE-1  | PROJECT-BASED LEARNING  | Yo  | ro  | -  | Gamé gl Tomo"  | \  | -1  | 0  | FITMATE Al  | P  | ’  | BETTER
+[67,272] Al-Powered Adaptive Fitness & Wellness Companion  | v  | FitMate 7  | HEALTHY  | s  | Smarter Workouts  | |  | Better Nutrition  | |  | A Healthier You  | STUOESTS  | S
+[173,351] Personalized  | H Workouts  | Problem Context  | l  | College students struggle to maintain consistent  | P  | (1)  | fitness routines because their time, energy, location,  | Guidance  | Sk  | equipment, goals and dietary constraints change  | PROGRESS  | frequently.
+[173,536] Our Goal  | Gb
+[173,567] GET  | Build a fitness companion that adapts  | recommendations to the user’s current situation.  | ALSURRORT
+[71,655] @® Team Name  | e@e® Team Members  | @R s.ciion | Batch  | F@® Name  | 1 | RollNo. Name  | 2 | Roll No.  | Name  | 3 | RollNo. Name  | 4 |  | Roll No.
+[45,733] Be Active d  | “  | Small Steps  | |  | Consistent Effort  | |  | A Healthier Tomorrow  | Be Healthy Be You
+
+
+============================== SLIDE 2 ==============================
+[1189,2] Let's Bridge the Gap  | <4
+[5,6] | KIET  | 2  | H  | [  | 14  | A  | a@ UNIVERSITY  | ) oo  | A oenincr. GHAZIABAD, UP (INDIA)
+[273,18] FITMATE Als
+[1248,33] SMARTBRIDGE
+[12,61] (Under Section 3 of the UGC Act, 1956)  | Empowering Minds. Enabling Skills.
+[273,66] Al-Powered Adaptive Fitness & Wellness Companion
+[187,120] Metric1  | |  | Innovation & Problem Solving
+[45,159] Empathise & Discover
+[761,217] Our Research
+[46,232] Understanding the User
+[762,247] Users interacted with
+[766,262] 10  | College Students
+[67,283] 66 Before building the solution, we first understood  | the people experiencing the problem.
+[42,360] What We Discovered
+[732,366] | don't have  | No equipment  | enough time.  | in my hostel.  | B  | -  | -  | ==  | -
+[98,414] [aig  | O]  | ()  | i+  | 4
+[1156,461] =
+[705,474] Budget  | Constraints
+[63,478] Limited Time  | Different  | Equipment  | Changing  | Environments  | Constraints  | Energy Levels  | Students often  | have only  | Hostel, home,  | Many students  | Workout intensity  | 10-30 minutes  | gym or campus.  | don't always have  | needs to change
+[1041,505] | want healthy
+[846,515] options but  | within my budget.  | My schedule  | changes every day. 4
+[695,532] Food choices are  | influenced by  | affordability.
+[1272,532] DISCIPLINE
+[1274,549] BUILDS  | FREEDOM
+[62,568] for exercise.  | access to  | depending on  | equipment.  | the day.
+[313,664] Students don't need another fixed fitness plan —
+[820,667] @ Evidence to Show
+[142,684] Ky lrsgnt  | they need flexibility.
+[877,696] Interview findings  | | Empathy map |  | Observations
+[42,750] R  | BeActive  | | BeHealthy  | | BeYou
+
+
+============================== SLIDE 3 ==============================
+[273,18] FITMATE Als
+[1021,33] nts  | SIgaNE  | B El  | ha“e”ges
+[273,65] Al-Powered Adaptive Fitness & Wellness Companion
+[265,118] Metric  | 2 | Problem Statement
+[96,154] |  | Define the Problem  | From User Insights to a Clear Problem Statement
+[474,258] What did our research tell us?
+[490,291] ?  | Il  | /&  |  WHO  | College students  | Diffolery  | Q  | WHAT?  | Difficulty maintaining consistent  | Environments®  | fitness routines
+[494,387] Q@  |  WHERE?  | Hostel, home, gym, campus
+[492,439] @ WHEN?  | When daily circumstances change  | Diet &  | Budget  | o WHY?  | Existing routines may not adapt to  | Constraints  | changing constraints.
+[36,553] Final Problem Statement  | College students struggle to maintain consistent fitness and wellness  | Better  | ~ &  | routines because their available time, energy, environment, equipment,  | tudetr\tS Fut“'es  | DISCIPLINE  | .  | goals and dietary constraints vary frequently.  | S thie’  | TODAY  | Hea™” —  | A HEALTHIER  | TOMORROW  | @  | Evidence to Show  | “  | W  | )  | i  | —  | 5W Problem Statement Template  | ’ Small Steps  | “  | Understand  | |  | Innovate  | |  | Build  | |  | A Healthier Tomorrow  | Big Changes
+
+
+============================== SLIDE 4 ==============================
+[3,6] e T  | |  | KIET  | H  | H  | H  | orewtoTosE  | i, UNIVERSITY  | hL «smo'”_‘ DELHI-NCR, GHAZIABAD, UP (INDIA)
+[273,18] FITMATE Als
+[1189,34] C p  | N\ SMARTBRIDGE
+[1325,52] Let's Bridge the Gap
+[12,61] (Under Section 3 of the UGC Act, 1956)  | Empowering Minds. Enabling Skills.
+[273,66] Al-Powered Adaptive Fitness & Wellness Companion
+[41,112] Braiatonm'S Prickitizs  | Brainstorm & Prioritize
+[40,233] From Problem — Possible Solutions  | We did NOT jump directly to FitMate. We explored multiple ideas.
+[902,272] FITMATE Al»s
+[597,295] Prioritization Criteria  | We evaluated each idea based on:
+[901,314] Al-Powered Adaptive Fitness & Wellness Companion
+[55,324] 01  | el  | J Z'll-,'
+[903,355] Why?
+[685,365] User Value
+[685,390] Solves a real user need
+[931,398] Brings together  | fitness personalization
+[70,413] Fixed Workout
+[259,412] Al Workout
+[429,410] Hostel Workout
+[95,432] Planner
+[262,431] Generator
+[458,429] Planner
+[685,435] Feasibility
+[61,455] Predefined workout  | routines for students.
+[234,454] Al-generated workouts
+[415,454] Workouts designed  | for hostel environments.
+[931,446] Adapts to changing  | daily context
+[686,459] Possible to build
+[232,471] based on user input.  | &
+[685,505] Innovation
+[931,504] Uses Al assistance  | for better recommendations
+[54,520] 04
+[412,516] 06  | (d
+[686,529] Brings something new
+[1145,525] A  | ,D\g(‘,\"\“(L =  | W HAPPENS  | X v
+[897,565] 113
+[685,573] Impact
+[931,573] One solution.  | Every situation.  | A healthier you.
+[83,596] Al Nutrition
+[269,596] Fitness  | Chatbot
+[428,596] Adaptive Fitness
+[685,597] Creates long-term value
+[445,614] Companion
+[90,615] Assistant
+[60,641] Personalized nutrition  | and diet suggestions.
+[233,642] Answer fitness doubts  | and provide guidance.
+[409,643] Personalized, adaptive
+[408,660] fitness and wellness support.
+[691,687] Evidence to Show
+[692,716] Brainstorm Sheet  | |  | Prioritization Matrix
+[1294,738] Small Ideas  | Big Impact
+[40,754] v  | Explore  | |  | Evaluate  | |  | Innovate  | |  | Build
+
+
+============================== SLIDE 5 ==============================
+[11,19] Empowering Minds. Enabling Skills.  | FITMATE Al~s  | our 30“::301‘  | Q_C& SMARTBRIDGE
+[272,54] Let's Bridge the Gap  | Al-Powered Adaptive Fitness & Wellness Companion  | A Heojth
+[199,123] Customer Journey | Understanding the User Experience
+[39,165] fferen  | <  | .  | C  | u  | sto m  | e  | r J o  | u  | rn e  | 66  | | have only 20 minutes today  | D‘ffffere"t N‘*ed  | FitMate adapts
+[42,202] and no equipment.  | Di  | SuPP"rt  | to your day, so you  | A Student’s Journey with FitMate  | - ACollege Student  | are
+[41,284] i  | ;  | 7  | o1  | 02  | 03  | 04  | 05  | 06  | o7  | 09  | B  | Discover  | Create  | Set  | Enter Today's  | Get  | Review /  | Workout  | View  | Profile  | Fitness Goal  | Context  | Recommendation  | Modify
+[346,382] V' LoseWeight  | ©® 20min  | Today's Plan  | Looks good!  | ‘  | Let’s start!
+[147,414] +/  Build Muscle  | x  | No  | v m)w  | >  | b  | 0 >  | e  | )  | el  | >  | >
+[363,446] Stay Fit  | Workout (15 min)  | 20 120  | 5  | A Athostel  | @ ostoown  | Mtes Coles Camrcons
+[49,539] Learns about  | Shares basic  | Chooses a  | Provides daily  | Rensves personalized  | Reviews and  | Follows the  | Logs activity  | Sees improvement  | FitMate  | details  | personal goal  | constraints  | workout & nutrition tips  | adjusts if needed  | workout plan  | and progress  | over time
+[46,610] Example Journey  | e  | User Action o  | User Need  | O  | Pain Point  | g  | FitMate Opportunity  | “I have only 20 minutes today and no equipment.
+[55,676] What the user does  | What the user wants  | What makes it difficult  | How we can help  | Gets home  | .  | hi  | Enters context -  | 2 Reviews  | = Performs  | - Tracks  | to achieve  | workout plan
+[40,755] v  | Real Journeys  | |  | Real Progress  | |  | A Healthier Tomorrow
+
+
+============================== SLIDE 6 ==============================
+[17,6] | KIET  | 2  | H  | e  | &  | FITMATE Als
+[12,53] uuuuuuuuuuuuuuuuuuuuuuuu  | (Under Section 3 of the UGC Act, 1956)  | Empowering Minds. Enabling Skills.
+[276,67] Al-Powered Adaptive Fitness & Wellness Companion
+[63,115] Requirement Analysis (Part 1)  | System Requirements
+[159,221] From User Needs to a Working Solution
+[400,305] Functional Requirements  | What should the system DO?
+[801,305] Operational Requirements  | How should the system perform in real use?
+[1213,296] 13
+[400,364] Core features to solve the user's problem.
+[801,364] Quality attributes for a better user experience.
+[1238,357] Build for  | Real Students.  | Real Life.  | Real Impact.
+[394,373] &8 IEDe
+[467,405] FRO1  |  Create user profile
+[808,405] a ORO1  |  Easy to use and student-friendly
+[466,444] FRO2  |  Capture daily fitness context
+[806,445] ’ ORO2  | Fast response time  | (© oro3 Aviable 24x7
+[466,485] FRO3  |  Generate personalized workout
+[1352,476] a
+[466,522] FRO4  |  Modify / recommend alternatives
+[806,521] Eﬁ  | OR0O4  |  Works on web and mobile
+[466,559] FRO5  | Provide Al fitness assistance
+[802,559] ;g ORO5  |  Supports multiple users
+[95,595] ggXEﬂsSTI’EE?’g  | FRO6  |  Provide nutrition suggestions
+[93,629] BIG RESULTS  | .ll  | FRO7  |  Track completed workouts
+[806,635] ° ORO7  |  Ensures data privacy and security  | o ORO8  |  Easy to maintain and update
+[394,644] @
+[466,675] FRO8  |  Display progress / history
+[402,749] ‘ﬂ Understand Needs  | l  | .ll Define Requirements  | |
+[799,749] 4‘&.. Build a Healthier Tomorrow
+
+
+============================== SLIDE 7 ==============================
+[12,4] KIET  | tion  | g UNIVERSITY  | FITMATE Als  | deas 10 Dplemer”  | Q_C& SMARTBRIDGE  | h  | SteP  | Let's Bridge the Gap  | EmposHing iinde Enblligskils]  | Al-Powered Adaptive Fitness & Wellness Companion  | S teP by
+[32,117] Requirement Analysis (Part 2)  | /  | System Requirements
+[100,211] Technical Requirements & System Flow  | How does it work?
+[430,263] Metric 5C
+[412,283] U  | Set Goal &  | Technical Requirements  | Register /Login >  | Daily Context  | What technology is needed to build the system?  | ‘
+[459,336] 2833¢28¢%
+[402,362] Sl -2  | N
+[414,369] G  | Web / Mobile application (responsive Ul)
+[413,381] Al Generates  | ab  | Al/ML model for personalized recommendations  | Recommendation
+[94,443] Database for user data and activity logs  | ¢  | CODE  | TRAIN  | IMPROVE
+[540,475] Integration with external APls
+[540,493] (e.g. nutrition, exercises)  | Track  | Performs  | User Reviews
+[540,529] Secure authentication and data encryption  | Progress  | WQerUt  | / Modifies
+[540,566] Scalable cloud infrastructure
+[540,584] (e.g., AWS / GCP)
+[540,618] Support for real-time processing  | 6t From Requirements to a Smarter Fitness Future. ’
+[541,662] Compatible with multiple devices and browsers
+[418,743] "  | Plan the Tech  | |  | ||I Build the Solution  | |  | :‘% Empower Healthier Students
+
+
+============================== SLIDE 8 ==============================
+[17,5] ===  | ts  | = K“I/%I  | FITMATE Als  | Fro"‘  | Requireme”  | < (X SMARTBRIDGE  | o
+[5,42] X  | ons  | ¥  | <  | o  | Al-Powered Adaptive Fitness & Wellness Companion  | l So[utl  | Let's Bridge the Gap
+[12,74] Empowering Minds. Enabling Skills. e
+[216,102] Interpretation & Modeling  | Turning Requirements into a System Model  | 4  | How does FitMate translate requirements into a working system?  | Mode
+[18,236] esid"  | o  | Dguild  | User Model  | Application Model  | Data Model  | I mProVe  | Representing the end user and  | How the system components  | Key data entities and their relationships.  | / their key attributes.  | work together.  | ® 1  | ®  | [T  | 03  | USER  | USER  | A  | \ \\ﬂ  | an  | aa@n
+[5,386] !  | -  | Profile  | S  | e  | Gl  FITMATE APPLICATION  | -  | v7  | v 9  | '
+[7,429] 4  | SMALL  | - @ Goals  | /  | STEPS  | .  | eb RECOMMENDATION LOGIC
+[96,479] BIG  | y 4  | .  | |  | v  | — a Daily Context  | RESULTS  | /  | -  | |  | I  | I  | # Al SERVICE  | ©]  | :  | | e orkous
+[365,576] Profil  | Fitness  | Daily  | ]  | T  | rofile  | H  | e  | = DATABASE  | . l I  | Progress
+[405,650] Key Message  | 4  | a Evidence  | Models help us translate user requirements into an understandable representation  | |  | User Model » Application Model « Data Model  | of the proposed system.  | (System / Process Models)
+[338,747] ‘  | Understand  | | o  | Model  | l  | .ll Build  | '  | :a% Create a Healthier Tomorrow
+
+
+============================== SLIDE 9 ==============================
+[268,25] FlT MATE Al ﬂ  | FroV" Ldeas  | act  | SMARTBRIDGE  | IMP  | Let's Bridge the Gap  | Al-Powered Adaptive Fitness & Wellness Companion  | 0/
+[583,93] Our Complete Journey
+[270,124] We  | didn’t start by building an application.  | How All the Metrics Connect T  | e  | A step-by-step journey from real users to a working solution  | and then modeling how our solution could  | address those requirements.  | ’
+[248,302] DEFINE  | BRAINSTORM  | CUSTOMER  | REQUIREMENTS  | MODEL  | g  | EHIRpIRRE  | PROBLEM  | & PRIORITIZE  | “JOURNEY  | (Functional + Operational  | THE SYSTEM  | FITMATE MVP  | + Technical + Flowchart)  | .  | @ .  | “‘U&*EO*n’:?ﬁ*  | Understand  | Identify and  | Explore multiple  | Map the  | Define what  | Create system  | A working  | real users  | frame the problem  | ideas  | user experience  | the system should do  | models  | prototype to solve
+[1256,456] the real problem
+[242,485] Student interviews  | Problem statement  | Generate ideas  | User journey  | Functional requirements  | User model  | Build  | Surveys  | User needs  | Evaluate options  | Touchpoints  | Operational requirements  | Process model  | Test with real users  | Observation  | Key insights  | Select best solution  | Pain points  | Technical requirements  | Data model  | Iterate  | Opportunities  | System flowchart  | Application model  | Create impact  | N0 -  | ¢  | Q  | Q  | O  | S Problem&;"f  | AT -~  | T  | Requirements  | ‘
+[385,667] 2 ‘  | é  | This  | is our MSE-1 Story ﬂ
+[430,751] FROM UNDERSTANDING  | |  | TO BUILDING  | |  | TO A HEALTHIER TOMORROW
